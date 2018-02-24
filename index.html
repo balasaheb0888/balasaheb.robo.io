@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>RoboPage</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="animate.css">
+
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+<body>
+	<h1 class="animated jackInTheBox">Robot Friend</h1>
+	<div class="animated bounceInDown robots">
+		<div class="animated  android">
+		
+			<div class="head" id="head">
+				<div class="eyes"> 
+					<div class="left_eye"></div> 
+					<div class="right_eye"></div>
+				</div> 
+			</div> 
+			<div class="upper_body"> 
+				<div class="left_arm"></div> 
+				<div class="torso"></div> 
+				<div class="right_arm"></div> 
+			</div> 
+			<div class="lower_body"> 
+				<div class="left_leg" id="legMove"></div> 
+				<div class="right_leg"></div> 
+			</div> 
+			
+		</div>
+	        <div id="msg">
+				<span style="color: red;">Message From Robo &nbsp; : &nbsp;</span>
+			</div> 	
+
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () 
+		{
+   $('#head').hover(function() 
+   {
+    $('#msg').append( $( "<span>Hey Champ Hello, How Are You..?</span>" ) );
+  }, function() {
+    $('#msg').find( "span:last" ).remove();
+  }
+);
+
+      $('#legMove').hover(function() 
+   {
+    $('#msg').append( $( "<span>Let's Robo Dance ..</span>" ) );
+  }, function() {
+    $('#msg').find( "span:last" ).remove();
+  }
+);
+		 
+		 
+	});
+		
+	</script>
+</body>
+</html>
